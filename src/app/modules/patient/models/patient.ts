@@ -1,37 +1,73 @@
 export class Patient {
-    constructor(id = '', 
-                type_documents = '', 
-                documents = '', 
-                name = '', 
-                birthdate = '',
-                address = '',
-                phone = '',
-                cellphone = '',
-                gender = '',
-                email = '') {
-        this.id = id;
-        this.type_documents = type_documents; 
-        this.documents = documents; 
-        this.name = name; 
-        this.birthdate = birthdate;
-        this.address = address;
-        this.phone = phone;
-        this.cellphone = cellphone;
-        this.gender = gender;
-        this.email = email;
+    params: Object;
+    constructor(IdPacientes='',
+      IdTipoDocumento='',
+      NumeroDocumento='',
+      NombreCompleto='',
+      Apellidos='',
+      Nombres='',
+      FechaNacimiento='',
+      Direccion='',
+      Telefono='',
+      Celular='',
+      Genero='',
+      Email='',
+      IdCreadoPor='',
+      IdModificadoPor='',
+      FechaCreacion='',
+      FechaModificacion='',
+      IdEstado='') {
+      this.IdPacientes = IdPacientes;
+      this.IdTipoDocumento = IdTipoDocumento; 
+      this.NumeroDocumento = NumeroDocumento;
+      this.NombreCompleto = Apellidos+' '+Nombres;
+      this.Apellidos = Apellidos;
+      this.Nombres = Nombres;
+      this.FechaNacimiento = FechaNacimiento;
+      this.Direccion = Direccion;
+      this.Telefono = Telefono;
+      this.Celular = Celular;
+      this.Genero = Genero;
+      this.Email = Email;
+      this.IdCreadoPor = IdCreadoPor;
+      this.IdModificadoPor = IdModificadoPor;
+      this.FechaCreacion = FechaCreacion;
+      this.FechaModificacion = FechaModificacion;
+      this.IdEstado = IdEstado;
+      this.params = {
+        "params":[
+          {
+            "IdEstado":{
+              "condition":"AND",
+              "clausula":"in",
+              "value":[1,2]
+            }
+          }
+        ],
+        "limit":0,
+        "orderBy":[
+          {
+            "campos": ["IdPacientes"],
+            "orderBy":"ASC"
+          }
+        ]
+      };
     }
-    id: string;
-    type_documents: string;
-    documents: string;
-    name: string;
-    birthdate: string;
-    address: string;
-    phone: string;
-    cellphone: string;
-    gender: string;
-    email: string;
-    user_created :Date;
-    users_update :Date;
-    createdAt:Date;
-    updatedAt:Date;
+    IdPacientes:string;
+    IdTipoDocumento:string; 
+    NumeroDocumento:string;
+    NombreCompleto:string;
+    Apellidos:string;
+    Nombres:string;
+    FechaNacimiento:string;
+    Direccion:string;
+    Telefono:string;
+    Celular:string;
+    Genero:string;
+    Email:string;
+    IdCreadoPor:string;
+    IdModificadoPor:string;
+    FechaCreacion:string;
+    FechaModificacion:string;
+    IdEstado:string;
 }

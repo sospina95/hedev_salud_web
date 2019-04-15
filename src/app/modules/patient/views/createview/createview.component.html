@@ -11,4 +11,82 @@
   </ol>
 </section>
 
-<app-createview-factory [factory]="field"></app-createview-factory>
+<section class="content">
+  <div class="row">
+    <div class="col-lg-12 col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Formulario de creación de Pacientes</h3>
+        </div>
+        <div class="container-fluid">
+            <form [formGroup]="formdata" (ngSubmit)="add(formdata)">
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="NumeroDocumento">Numero Documento:</label>
+                        <input type="text" class="form-control" id="NumeroDocumento" formControlName="NumeroDocumento">
+                      </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Apellidos">Apellidos:</label>
+                      <input type="text" class="form-control" id="Apellidos" formControlName="Apellidos">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Nombres">Nombres:</label>
+                      <input type="text" class="form-control" id="Nombres" formControlName="Nombres">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="FechaNacimiento">Fecha Nacimiento:</label>
+                      <input type="date" class="form-control" id="FechaNacimiento" formControlName="FechaNacimiento">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Direccion">Dirección:</label>
+                      <input type="text" class="form-control" id="Direccion" formControlName="Direccion">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="Telefono">Teléfono:</label>
+                        <input type="text" class="form-control" id="Telefono" formControlName="Telefono">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Celular">Celular:</label>
+                      <input type="text" class="form-control" id="Celular" formControlName="Celular">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Genero">Género:</label>
+                      <input type="text" class="form-control" id="Genero" formControlName="Genero">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="Email">Email:</label>
+                      <input type="email" class="form-control" id="Email" formControlName="Email">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                  </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

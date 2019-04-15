@@ -10,4 +10,68 @@
     </li>
   </ol>
 </section>
-<app-table-factory [factory]="field"></app-table-factory>
+
+
+
+
+<section class="content">
+  <div class="btn-group-horizontal">
+    <a class="btn btn-primary" routerLink="/patient/createview">Crear</a>
+    <button type="button" class="btn btn-info">Info</button>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Lista Pacientes</h3>
+        </div>
+        <div class="box-body">
+          <table id="example2" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                  <th>IdPacientes</th>
+                  <th>TipoDocumento</th> 
+                  <th>NumeroDocumento</th> 
+                  <th>NombreCompleto</th> 
+                  <th>Apellidos</th> 
+                  <th>Nombres</th> 
+                  <th>FechaNacimiento</th> 
+                  <th>Direccion</th> 
+                  <th>Telefono</th> 
+                  <th>Celular</th> 
+                  <th>Genero</th> 
+                  <th>Email</th> 
+                  <th>IdCreadoPor</th> 
+                  <th>IdModificadoPor</th> 
+                  <th>FechaCreacion</th>
+                  <th>FechaModificacion</th>
+                  <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of patients.data;">
+                <a [routerLink]="['detailview', item.IdPacientes ]">{{item.m_PacientesIdPacientes}}</a>
+                <td>{{item.m_TipoDocumentoDescripcion }}</td> 
+                <td>{{item.m_PacientesNumeroDocumento }}</td> 
+                <td>{{item.m_PacientesNombreCompleto }}</td> 
+                <td>{{item.m_PacientesApellidos }}</td> 
+                <td>{{item.m_PacientesNombres }}</td> 
+                <td>{{item.m_PacientesFechaNacimiento }}</td>
+                <td>{{item.m_PacientesDireccion }}</td> 
+                <td>{{item.m_PacientesTelefono }}</td> 
+                <td>{{item.m_PacientesCelular }}</td> 
+                <td>{{item.m_PacientesGenero }}</td> 
+                <td>{{item.m_PacientesEmail }}</td> 
+                <td>{{item.m_PacientesIdCreadoPor }}</td> 
+                <td>{{item.m_PacientesIdModificadoPor }}</td> 
+                <td>{{item.m_PacientesFechaCreacion }}</td>
+                <td>{{item.m_PacientesFechaModificacion }}</td>
+                <td>{{item.m_EstadoDescripcion }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -32,11 +32,9 @@ export class FactoryService {
       map(this.extractData),
       catchError(this.handleError));
   }
-
   saveModule(Params): Observable <any> {
     return this.http.post(this.URL_API, Params).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
-  
 }
