@@ -35,7 +35,8 @@
               "src/assets/bower_components/select2/dist/css/select2.min.css",
               "src/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
               "src/assets/dist/css/AdminLTE.min.css",
-              "src/assets/dist/css/skins/_all-skins.min.css"
+              "src/assets/dist/css/skins/_all-skins.min.css",
+              "src/assets/dist/css/growl/jquery.growl.css"
             ],
             "scripts": [
               "src/assets/bower_components/jquery/dist/jquery.min.js",
@@ -58,7 +59,8 @@
               "src/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
               "src/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
               "src/assets/bower_components/chart.js/Chart.js",
-              "src/assets/dist/js/demo.js"
+              "src/assets/dist/js/demo.js",
+              "src/assets/dist/js/growl/jquery.growl.js"
             ]
           },
           "configurations": {
