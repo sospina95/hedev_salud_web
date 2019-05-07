@@ -24,8 +24,8 @@ export class PatientService {
     return throwError('Something bad happened; please try again later.');
   };
   constructor(private http: HttpClient) {}
-  postPatient(patient: Patient) {
-    return this.http.post(this.URL_API, patient).pipe(
+  postPatient(Params) {
+    return this.http.post(this.URL_API+'/create', Params).pipe(
       map(extractData),
       catchError(this.handleError));
   }

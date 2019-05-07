@@ -22,65 +22,110 @@
             <form [formGroup]="formdata" (ngSubmit)="add(formdata)">
                 <div class="row">
                   <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="IdTipoDocumento">Tipo de documento:</label>
+                      <select class="form-control select2" style="width: 100%;" id="IdTipoDocumento" formControlName="IdTipoDocumento">
+                        <option selected="selected" value='1'>Cedula</option>
+                        <option value='2'>Tarjeta de identidad</option>
+                      </select>
+                      <div *ngIf="!formdata.controls['IdTipoDocumento'].valid && formdata.controls['IdTipoDocumento'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
                       <div class="form-group">
-                        <label for="NumeroDocumento">Numero Documento:</label>
+                        <label for="NumeroDocumento">Número Documento:</label>
                         <input type="text" class="form-control" id="NumeroDocumento" formControlName="NumeroDocumento">
+                        <div *ngIf="!formdata.controls['NumeroDocumento'].valid && formdata.controls['NumeroDocumento'].touched">
+                          Este campo es
+                          <strong>obligatorio</strong>
+                        </div>
                       </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Apellidos">Apellidos:</label>
                       <input type="text" class="form-control" id="Apellidos" formControlName="Apellidos">
+                      <div *ngIf="!formdata.controls['Apellidos'].valid && formdata.controls['Apellidos'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
+                </div>
+                <div class="row">                
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Nombres">Nombres:</label>
                       <input type="text" class="form-control" id="Nombres" formControlName="Nombres">
+                      <div *ngIf="!formdata.controls['Nombres'].valid && formdata.controls['Nombres'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
-
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="FechaNacimiento">Fecha Nacimiento:</label>
                       <input type="date" class="form-control" id="FechaNacimiento" formControlName="FechaNacimiento">
+                      <div *ngIf="!formdata.controls['FechaNacimiento'].valid && formdata.controls['FechaNacimiento'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Direccion">Dirección:</label>
                       <input type="text" class="form-control" id="Direccion" formControlName="Direccion">
+                      <div *ngIf="!formdata.controls['Direccion'].valid && formdata.controls['Direccion'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
+                </div> 
+                <div class="row">
                   <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="Telefono">Teléfono:</label>
-                        <input type="text" class="form-control" id="Telefono" formControlName="Telefono">
+                      <label for="Telefono">Teléfono:</label>
+                      <input type="text" class="form-control" id="Telefono" formControlName="Telefono">
+                      <div *ngIf="!formdata.controls['Telefono'].valid && formdata.controls['Telefono'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>  
                     </div>
                   </div>
-
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Celular">Celular:</label>
                       <input type="text" class="form-control" id="Celular" formControlName="Celular">
+                      <div *ngIf="!formdata.controls['Celular'].valid && formdata.controls['Celular'].touched">
+                          Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Genero">Género:</label>
-                      <input type="text" class="form-control" id="Genero" formControlName="Genero">
+                      <select class="form-control select2" style="width: 100%;" id="Genero" formControlName="Genero">
+                        <option selected="selected" value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                      </select>
+                      <div *ngIf="!formdata.controls['Genero'].valid && formdata.controls['Genero'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label for="Email">Email:</label>
                       <input type="email" class="form-control" id="Email" formControlName="Email">
+                      <div *ngIf="!formdata.controls['Email'].valid && formdata.controls['Email'].touched">
+                        Este campo es <strong>obligatorio</strong>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <button type="submit" class="btn btn-success" [disabled]="bloqueoBoton">Guardar</button>
                   </div>
                 </div>
             </form>

@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FactoryService } from './factory/service/factory.service';
-import { MessagingService } from './factory/service/messaging.service';
 
 let schemas: any[] = [];
 schemas.push(NO_ERRORS_SCHEMA);
@@ -21,7 +20,7 @@ schemas.push(NO_ERRORS_SCHEMA);
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [MessagingService,FactoryService],
+  providers: [FactoryService],
   bootstrap: [AppComponent],
   schemas: schemas
 })
