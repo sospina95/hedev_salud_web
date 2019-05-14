@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FactoryService } from './factory/service/factory.service';
 
+
+
 let schemas: any[] = [];
 schemas.push(NO_ERRORS_SCHEMA);
 
@@ -18,7 +20,7 @@ schemas.push(NO_ERRORS_SCHEMA);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [FactoryService],
   bootstrap: [AppComponent],

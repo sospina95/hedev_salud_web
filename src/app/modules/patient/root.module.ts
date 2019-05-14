@@ -6,7 +6,8 @@ import { CreateviewComponent } from './views/createview/createview.component';
 import { EditviewComponent } from './views/editview/editview.component';
 import { DetailviewComponent } from './views/detailview/detailview.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: '', component: ListviewComponent },
@@ -16,7 +17,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule,FormsModule,RouterModule.forChild(routes),ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    GridModule
+  ],
   declarations: [
     ListviewComponent, 
     CreateviewComponent, 
